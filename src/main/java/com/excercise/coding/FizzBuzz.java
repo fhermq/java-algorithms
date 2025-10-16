@@ -9,7 +9,7 @@ public class FizzBuzz {
     public static void main(String[] args) {
         int n = 15;
         List<String> fizzBuList;
-        String result[] = null;
+        String result[];
         fizzBuList = getFizzBuzzList(n);
         System.out.println(fizzBuList.toString());
         fizzBuList = getFizzBuzzListTwo(n);
@@ -39,6 +39,11 @@ public class FizzBuzz {
         return fizzBuzzList;
     }
 
+
+    /*
+     *TC: 0(n)
+     *SC: 0(1)  
+     */
     public static List<String> getFizzBuzzListTwo(int n) {
         List<String> fizzBuzzList = new ArrayList<>();
         for (int i = 1; i <= n; i++) {
