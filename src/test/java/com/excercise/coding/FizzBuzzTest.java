@@ -8,7 +8,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-@DisplayName("Calculator Functionality Tests")
+@DisplayName("Fizz Buzz Algorith")
 class FizzBuzzTest {
 
     private FizzBuzz fizzBuzz;
