@@ -31,12 +31,6 @@
             <version>5.10.0</version> <!-- Use the latest stable version -->
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.10.0</version> <!-- Use the latest stable version -->
-            <scope>test</scope>
-        </dependency>
     </dependencies>
 
     <build>
@@ -61,8 +55,16 @@
                     </configuration>
                 </plugin>
                 <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
-                    <version>3.1.2</version>
+                    <version>3.2.2</version> <!-- Use the latest stable version -->
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.junit.jupiter</groupId>
+                            <artifactId>junit-jupiter-engine</artifactId>
+                            <version>5.10.1</version> <!-- Use the version matching your JUnit Jupiter -->
+                        </dependency>
+                    </dependencies>
                 </plugin>
                 <plugin>
                     <artifactId>maven-jar-plugin</artifactId>
@@ -88,16 +90,16 @@
                 <plugin>
                     <groupId>org.jacoco</groupId>
                     <artifactId>jacoco-maven-plugin</artifactId>
-                    <version>${jacoco.version}</version>
+                    <version>0.8.11</version>
                     <executions>
                         <execution>
-                            <id>default-prepare-agent</id>
                             <goals>
                                 <goal>prepare-agent</goal>
                             </goals>
                         </execution>
                         <execution>
-                            <id>default-report</id>
+                            <id>report</id>
+                            <phase>prepare-package</phase>
                             <goals>
                                 <goal>report</goal>
                             </goals>
