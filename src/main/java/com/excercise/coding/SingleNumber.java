@@ -9,10 +9,10 @@ public class SingleNumber {
      * TC: 0(n)
      * SC: 0(1)
      */
-    public int getSingleNumber(int array[]) {
+    public int getSingleNumber(int numbers[]) {
         int singleNumber = 0;
-        for (int num : array) {
-            singleNumber ^= num;
+        for (int number : numbers) {
+            singleNumber ^= number;
         }
         return singleNumber;
     }
@@ -22,13 +22,14 @@ public class SingleNumber {
      * TC: 0(n)
      * SC: 0(n)
      */
-    public int getSingleNumberWithSet(int array[]) {
+    public int getSingleNumberWithSet(int numbers[]) {
+        if(numbers.length==1) return 0;
         Set<Integer> set = new HashSet<>();
-        for (int num : array) {
-            if (set.contains(num)) {
-                set.remove(num);
+        for (int number : numbers) {
+            if (set.contains(number)) {
+                set.remove(number);
             } else {
-                set.add(num);
+                set.add(number);
             }
         }
         return set.iterator().next();

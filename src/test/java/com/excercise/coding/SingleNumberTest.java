@@ -19,6 +19,7 @@ public class SingleNumberTest {
     @Test
     @DisplayName("getSingleNumber - Should return the single number that is not repeated")
     void testGetSingleNumber() {
+        setUp();
         int actual = singleNumber.getSingleNumber(array);
         assertEquals(4, actual);
     }

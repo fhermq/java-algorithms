@@ -29,6 +29,7 @@ class FizzBuzzTest {
     @Test
     @DisplayName("getFizzBuzzArray - Should correctly get FizzBuzz Array for 1")
     void testgetFizzBuzzArrayWithOne() {
+        setUp();
         String[] actual = fizzBuzz.getFizzBuzzArray(1);
         assertArrayEquals(expected1, actual, "Error");
     }
