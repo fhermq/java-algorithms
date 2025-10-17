@@ -41,4 +41,23 @@ Reversing an integer in Java can be achieved using a mathematical approach with 
     }
     }
 
+## Trailing Zeroes in a Factorial
 
+To find the number of trailing zeros in a factorial, count the number of times 5 is a factor in the prime factorization of the number. This is calculated by summing the integer results of dividing the number (\(n\)) by powers of 5 (\(5,25,125,\) etc.) until the result is less than 1. Each pair of a 2 and a 5 creates a trailing zero, but there will always be more factors of 2 than 5, so only counting the factors of 5 is sufficient. 
+
+ :link: [FactorialTrailingZeroes.java](src/main/java/com/excercise/coding/FactorialTrailingZeroes.java)
+
+How to calculate the trailing zeros 
+
+- Divide \(n\) by 5: Find the integer part of \(n/5\).
+- Divide \(n\) by 25: Find the integer part of \(n/25\).
+- Divide \(n\) by 125: Find the integer part of \(n/125\).
+- Continue: Keep dividing \(n\) by increasing powers of 5 (\(625,3125,\) etc.) until the result is less than 1.
+- Sum the results: Add up all the integer results from the divisions. This sum is the number of trailing zeros. 
+
+Example: Find the trailing zeros in 137! 
+- 137/5=27.4 (integer part is 27)
+- 137/25=5.48 (integer part is 5)
+- 137/125=1.096 (integer part is 1)
+- 137/625<1 (stop here)
+- 27 + 5 + 1 = **33** 
