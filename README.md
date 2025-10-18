@@ -76,5 +76,5 @@ Method 1: Mathematical approach
 - Remove the last digit: Divide the original number by 10 using integer division (// 10) to remove the last digit.
 - Repeat: Continue this process until the original number becomes zero.
 - Handle negative numbers: The same logic works for negative numbers, though the modulo and division behavior may vary by language, so check the specific behavior for your programming language.
-- Check for overflow: Before adding a new digit, check if the reversed integer will exceed the 32-bit signed integer range (\([-2^{31},2^{31}-1]\)). If it does, return 0. 
+- Check for overflow: Before adding a new digit, check if the reversed integer will exceed the 32-bit signed integer range -2^31^ , 2^31^-1. If it does, return 0. 
 
