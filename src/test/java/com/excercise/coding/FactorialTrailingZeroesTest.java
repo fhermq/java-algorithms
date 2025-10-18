@@ -20,6 +20,7 @@ public class FactorialTrailingZeroesTest {
     @Test
     @DisplayName("trailingZeroes - Should return the count of trailling Zeroes Factorial")
     void testFactorialTrailingZeroes() {
+        setUp();
         int[] actual = new int[input.length];
         for (int i = 0; i < input.length; i++) {
             actual[i]= factorialTrailingZeroes.trailingZeroes(input[i]);

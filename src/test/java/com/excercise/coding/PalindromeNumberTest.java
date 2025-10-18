@@ -29,6 +29,7 @@ public class PalindromeNumberTest {
     @Test
     @DisplayName("isPalindromeNumber - Should return false ")
     void testIsPalindromeNumberFalse() {
+        setUp();
         int number = -121;
         assertFalse(palindromeNumber.isPalindromeNumber(number));
         number = 10;
