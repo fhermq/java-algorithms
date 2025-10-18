@@ -1,0 +1,4 @@
+target/classes/com/excercise/coding/
+target/test-classes/com/excercise/coding/
+target/classes/com/excercise/coding/*.class
+target/test-classes/com/excercise/coding/*.class

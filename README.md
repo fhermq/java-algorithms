@@ -61,3 +61,20 @@ Example: Find the trailing zeros in 137! 
 - 137/125=1.096 (integer part is 1)
 - 137/625<1 (stop here)
 - 27 + 5 + 1 = **33** 
+
+
+### Reverse Integer
+
+To reverse an integer, you can use either a mathematical or string-based approach, both of which involve handling the sign and potential overflow issues. The mathematical method iteratively extracts the last digit using the modulo operator, builds the reversed number by multiplying by 10 and adding the digit, and then removes the last digit from the original number. The string method converts the integer to a string, reverses the string, handles the negative sign if present, and then converts it back to an integer. 
+
+  :link: [ReverseInteger.java](src/main/java/com/excercise/coding/ReverseInteger.java)
+
+Method 1: Mathematical approach
+
+- Extract the last digit: Use the modulo operator (% 10) to get the last digit
+- Build the reversed number: Multiply the current reversed number by 10 and add the extracted digit.
+- Remove the last digit: Divide the original number by 10 using integer division (// 10) to remove the last digit.
+- Repeat: Continue this process until the original number becomes zero.
+- Handle negative numbers: The same logic works for negative numbers, though the modulo and division behavior may vary by language, so check the specific behavior for your programming language.
+- Check for overflow: Before adding a new digit, check if the reversed integer will exceed the 32-bit signed integer range (\([-2^{31},2^{31}-1]\)). If it does, return 0. 
+
