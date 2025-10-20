@@ -18,7 +18,7 @@ public class ReverseIntegerTest {
     }
 
     @Test
-    @DisplayName("Should")
+    @DisplayName("Should get the Reverse Integer")
     void testReverseInteger() {
         setUp();
         int [] actual = new int[input.length];
