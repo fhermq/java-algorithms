@@ -78,3 +78,25 @@ Method 1: Mathematical approach
 - Handle negative numbers: The same logic works for negative numbers, though the modulo and division behavior may vary by language, so check the specific behavior for your programming language.
 - Check for overflow: Before adding a new digit, check if the reversed integer will exceed the 32-bit signed integer range -2^31^ , 2^31^-1. If it does, return 0. 
 
+
+## Binary exponentiation
+
+Binary exponentiation, also known as exponentiation by squaring, is an efficient algorithm to compute \(x^{n}\) (x raised to the power of n) with a time complexity of \(O(\log n)\), significantly faster than the naive \(O(n)\) approach. This method leverages the properties of powers based on the parity of the exponent. 
+
+:link: [PowXNBinaryExponentiation.java](src/main/java/com/excercise/coding/PowXNBinaryExponentiation.java)
+
+#### Core Principle:               
+The algorithm relies on these observations:     
+- **Base Case:** \(x^{0}=1\) 
+- **Even Exponent:** If \(n\) is even, then \(x^{n}=(x^{n/2})\cdot (x^{n/2})\).  
+- **Odd Exponent:** If \(n\) is odd, then \(x^{n}=x\cdot x^{n-1}\). Since \(n-1\) is even, we can apply the even exponent rule to \(x^{n-1}\).            
+
+#### Algorithm Steps (Iterative Approach):     
+- **Initialization**: Initialize a variable result to 1.0 and current_base to x. Handle negative exponents by converting n to its positive equivalent and taking the reciprocal of x at the end (since \(x^{-n}=1/x^{n}\)). 
+
+- **Looping**: While n is greater than 0: 
+   - **Check Parity:** If n is odd (i.e., n % 2 == 1), multiply result by current_base.
+   - **Square Base:** Square current_base (i.e., current_base = current_base * current_base). 
+   - **Halve Exponent:** Divide n by 2 (integer division, n = n // 2). 
+ - **Return:** Return the final result.
+
