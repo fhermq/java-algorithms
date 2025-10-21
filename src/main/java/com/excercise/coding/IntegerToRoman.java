@@ -17,7 +17,6 @@ public class IntegerToRoman {
                 num = num - valueSymbols[i];
             }
         }
-        System.out.println(result.toString());
         return result.toString();
     }
 }
