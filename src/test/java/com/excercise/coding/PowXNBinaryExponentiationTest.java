@@ -22,6 +22,7 @@ public class PowXNBinaryExponentiationTest {
     @Test
     @DisplayName("Should get the X")
     void testMyPow() {
+        setUp();
         double[] result = new double[outputExpected.length];
         for (int i = 0; i < inputN.length; i++) {
             result[i] = powXNBinaryExponentiation.myPow(inputX[i], inputN[i]);
