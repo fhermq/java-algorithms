@@ -4,7 +4,7 @@ Common Use Cases for XOR in Java:
 
 
 **Finding the Unique Element in an Array**: If an array contains numbers where every element appears an even number of times except for one unique element, XORing all elements together will isolate the unique element. This is because x ^ x = 0 and x ^ 0 = x, so all duplicate pairs cancel each other out, leaving only the unique number.
-  :link: [SingleNumber.java](src/main/java/com/excercise/coding/SingleNumber.java)
+  :link: [SingleNumber.java](src/main/java/com/excercise/coding/integers/SingleNumber.java)
 
 
     ```
@@ -23,7 +23,7 @@ Common Use Cases for XOR in Java:
 
 Reversing an integer in Java can be achieved using a mathematical approach with a loop. This method iteratively extracts the last digit of the original number and builds the reversed number.
 
-  :link: [PalindromeNumber.java](src/main/java/com/excercise/coding/PalindromeNumber.java)
+  :link: [PalindromeNumber.java](src/main/java/com/excercise/coding/integers/PalindromeNumber.java)
 
     public class ReverseInteger {
     public static void main(String[] args) {
@@ -45,7 +45,7 @@ Reversing an integer in Java can be achieved using a mathematical approach with 
 
 To find the number of trailing zeros in a factorial, count the number of times 5 is a factor in the prime factorization of the number. This is calculated by summing the integer results of dividing the number (\(n\)) by powers of 5 (\(5,25,125,\) etc.) until the result is less than 1. Each pair of a 2 and a 5 creates a trailing zero, but there will always be more factors of 2 than 5, so only counting the factors of 5 is sufficient. 
 
- :link: [FactorialTrailingZeroes.java](src/main/java/com/excercise/coding/FactorialTrailingZeroes.java)
+ :link: [FactorialTrailingZeroes.java](src/main/java/com/excercise/coding/integers/FactorialTrailingZeroes.java)
 
 How to calculate the trailing zeros 
 
@@ -67,7 +67,7 @@ Example: Find the trailing zeros in 137! 
 
 To reverse an integer, you can use either a mathematical or string-based approach, both of which involve handling the sign and potential overflow issues. The mathematical method iteratively extracts the last digit using the modulo operator, builds the reversed number by multiplying by 10 and adding the digit, and then removes the last digit from the original number. The string method converts the integer to a string, reverses the string, handles the negative sign if present, and then converts it back to an integer. 
 
-  :link: [ReverseInteger.java](src/main/java/com/excercise/coding/ReverseInteger.java)
+  :link: [ReverseInteger.java](src/main/java/com/excercise/coding/integers/ReverseInteger.java)
 
 Method 1: Mathematical approach
 
@@ -83,7 +83,7 @@ Method 1: Mathematical approach
 
 Binary exponentiation, also known as exponentiation by squaring, is an efficient algorithm to compute \(x^{n}\) (x raised to the power of n) with a time complexity of \(O(\log n)\), significantly faster than the naive \(O(n)\) approach. This method leverages the properties of powers based on the parity of the exponent. 
 
-:link: [PowXNBinaryExponentiation.java](src/main/java/com/excercise/coding/PowXNBinaryExponentiation.java)
+:link: [PowXNBinaryExponentiation.java](src/main/java/com/excercise/coding/integers/PowXNBinaryExponentiation.java)
 
 #### Core Principle:               
 The algorithm relies on these observations:     
