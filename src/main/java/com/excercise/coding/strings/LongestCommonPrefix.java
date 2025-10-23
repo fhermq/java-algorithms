@@ -2,7 +2,7 @@ package com.excercise.coding.strings;
 
 public class LongestCommonPrefix {
 
-    /*
+    /**
      * TC: O(m*n)
      * SC: O(1)
      */
