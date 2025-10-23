@@ -100,3 +100,25 @@ The algorithm relies on these observations:
    - **Halve Exponent:** Divide n by 2 (integer division, n = n // 2). 
  - **Return:** Return the final result.
 
+
+## Expand Around Center
+
+The "Expand Around Center" algorithm is a technique primarily used to find palindromic substrings within a given string, most notably in solving the "Longest Palindromic Substring" problem.
+
+#### Core Idea
+The algorithm leverages the property that every palindrome has a center. This center can be either a single character (for odd-length palindromes like "aba") or the space between two adjacent characters (for even-length palindromes like "abba"). The algorithm iterates through all possible centers and expands outwards to find the longest palindrome centered at that position. 
+
+:link: [LongestPalindromicSubstring.java](src/main/java/com/excercise/coding/strings/LongestPalindromicSubstring.java)
+
+
+## Sliding window
+
+The sliding window algorithm is an optimization technique used primarily for problems involving arrays, lists, or strings where a contiguous subsegment (the "window") needs to be analyzed. This technique aims to reduce time complexity, often from O(n²) or O(n³) down to O(n), by avoiding redundant calculations.
+
+#### Core Concept:
+Instead of re-evaluating calculations for every possible subsegment, the sliding window maintains a dynamic "window" that moves across the data. As the window slides, elements are added at one end and removed from the other, allowing for efficient updates to the calculation based on the previous window's state.
+
+:link: [LongestSubstringWithoutRepeatingCharacters.java](src/main/java/com/excercise/coding/strings/LongestSubstringWithoutRepeatingCharacters.java)
+
+
+
