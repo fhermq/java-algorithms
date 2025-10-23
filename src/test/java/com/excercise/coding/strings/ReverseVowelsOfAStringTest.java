@@ -23,6 +23,7 @@ public class ReverseVowelsOfAStringTest {
     @Test
     @DisplayName("Should perform reverse Vowels of a String")
     void reverseVowelsOfAStringTestTC01(){
+        setUp();
         String inpuString = "leetcode";
         assertEquals("leotcede",reverseVowelsOfAString.reverseVowels(inpuString),"Should be equals");
         inpuString="IceCreAm";
