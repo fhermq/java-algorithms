@@ -4,6 +4,12 @@ import java.util.HashMap;
 
 public class LongestSubstringWithoutRepeatingCharacters {
 
+    /**
+     * 3. Longest Substring Without Repeating Characters - Leetcode
+     * Hint: Sliding window technique
+     * TC: O(n)
+     * SC: O(n)
+     */
     public int lengthOfLongestSubstring(String s) {
         int left = 0;
         int length = 0;
