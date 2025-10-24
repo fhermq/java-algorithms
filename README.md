@@ -1,3 +1,5 @@
+# Algorithms with integers
+
 ## XOR in Java
 
 Common Use Cases for XOR in Java:
@@ -100,6 +102,7 @@ The algorithm relies on these observations:
    - **Halve Exponent:** Divide n by 2 (integer division, n = n // 2). 
  - **Return:** Return the final result.
 
+# Algorithms with Strings
 
 ## Expand Around Center
 
